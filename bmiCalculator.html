@@ -1,0 +1,89 @@
+<!DOCKTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Calculator</title>
+    <!--External CSS-->
+    <link rel="stylesheet" href="bmiCalculatorCss.css">
+    <!--bootStrap link CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <!--External JS-->
+    <script src="bmiCalculatorJs.js"></script>
+    <link rel="icon" href="icons8-xbox-b-48.png">
+
+</head>
+
+<body>
+    <div class="container-fluid ">
+        <form id="bmiForm">
+            <!-- form = 1 sida.-->
+            <div class="row">
+                <div class="green col-sm-12">
+                    <p>BMI & BMR Calculator</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Choose your gender:</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input id="chkbxMale" type="radio" name="gender" checked="checked" value="m">Male
+                    <input id="chkbxFemale" type="radio" name="gender" value="f">Female
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Enter your age:</h2>
+                    <input id="age">YEARS OLD
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Enter your weight:</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <input id="weight">KG
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Enter your height: </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input id="height">
+
+                    <input id="chkbxCm" type="radio" name="height" checked="checked" value="centiMeter">CM
+                    <input id="chkbxM" type="radio" name="height" value="meter">M
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <button type="button" class="btn btn-primary btn-lg marginTop15px" onclick="calculateResult()">Calculate
+                        your BMI and BMR
+                    </button>
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-secondary btn-lg marginTop15px" onclick="resetAllFields()">Reset</button>
+            </div>
+            <div class="boldText">
+                <div id="result"></div>
+                <div id="resultBmr"></div>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
